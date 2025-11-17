@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Train Details</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/train.css">
+</head>
+<body>
+  <div id="map"></div>
+  <div class="Enquiry">
+  
+  <form id="search-form" action="/mainlogin/mapdetails" method="post">
+    <h1 class="train_head">Train Enquiry</h1>
+    <label for="">Source:</label>
+    <input type="text" id="source" name="source" placeholder="Enter the source station">
+    <br>
+    <label for="">Destination</label>
+    <input type="text" id="destination" name="destination" placeholder="Enter the destination station">
+    <br>
+    <button class="btn">
+      <span class="btn-text-one">Submit</span>
+      <span class="btn-text-two">Great!</span>
+  </button>
+</form>
+</div>
+  <div id="train-details"></div>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+  <script src="/js/train.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

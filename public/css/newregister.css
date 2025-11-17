@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: #212121;
+    background-size: 280;
+    background-position: -400px 0px;
+}
+
+div.main{
+    width: 400px;
+    margin: 100px auto 0px auto;
+}
+
+h2{
+    text-align: center;
+    padding: 20px;
+    /* font-family: sans-serif; */
+}
+.h3{
+ left:20px;
+}
+
+div.register{
+   background-color: #171717;
+    height: fit-content;
+    width: 100%;
+    font-size: 18px;
+    top: 50px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    align-items: center;
+    border-radius: 0;
+    transition: all .2s;
+}
+
+form#register{
+    margin: 40px;
+    margin-top: 60px;
+}
+
+label{
+    /* font-family: sans-serif; */
+    font-size: 18px;
+    font-style: italic;
+    
+}
+
+
+.name{
+    width: 300px;
+    background-color: transparent;
+    border-radius: 25px;
+    outline: 0;
+    border: none;
+    padding: 7px;
+    color: white;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+input#submit{
+    width: 200px;
+    padding: 7px;
+    font-size: 16px;
+    /* font-family: sans-serif; */
+    font-weight: 600;
+    border-radius: 3px;
+    background-color: rgba(250,100,0,0.8);
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+}
+
+label{
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+
+
+ .name:required:invalid{
+    border: none;
+} 
+
+ .name:invalid{
+    border: 2px solid red;
+}
+
+
+.name:valid{
+    border: 2px solid green;
+} 
+
+
+
+.register:hover{
+    box-shadow: 0px 0px 30px 1px rgb(255, 166, 0);
+}
+
+.card {
+    background-image: linear-gradient(163deg, orange 0%, #ffca1c 100%);
+    border-radius: 22px;
+    transition: all .3s;
+  }
+  
+  
+  
+  .register:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(255, 166, 0, 0.918);
+  }
+
+  .animated-button {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: #ffffff40;
+    box-shadow: 0 0 0 2px #ffffff20;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .animated-button span:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .animated-button span:first-child {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 5px orangered;
+    color: #ffffff;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+  }
+  
+  .animated-button:hover span:last-child {
+    width: 150px;
+    height: 150px;
+    opacity: 1;
+  }
+  
+  
+  /* ========================button========================= */
+  .btn {
+    width: 140px;
+    height: 50px;
+    background: linear-gradient(to top,  #ff8c08,#ffbd08, #fbff06);
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+   left: 125px;
+   margin-top: 8px;
+   margin-bottom: 8px
+  }
+  
+  .btn span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: top 0.5s;
+  }
+  
+  .btn-text-one {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .btn-text-two {
+    position: absolute;
+    width: 100%;
+    top: 150%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .btn:hover .btn-text-one {
+    top: -100%;
+  }
+  
+  .btn:hover .btn-text-two {
+    top: 50%;
+  }
+  
+  .home{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    color: orange;
+   }
+
+   .ri-home-8-fill{
+    position: fixed;
+    left: 1600px;
+    bottom: 700px;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    font-size: 60px;
+    color: orange;
+    border: 2px solid orange;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+   }

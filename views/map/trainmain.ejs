@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>train Details</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/train.css">
+</head>
+<body>
+  
+  <div id="map"></div>
+  <div class="Enquiry">
+ 
+  <form id="search-form" action="/mainlogin/mapdetails" method="post">
+    <h1 class="train_head"> Train Enquiry </h1>
+    <label for="">Source:</label>
+    <input type="text" id="source" name="source" placeholder="Enter the source station">
+    <br>
+    <label for="">Destination</label>
+    <input type="text" id="destination" name="destination" placeholder="Enter the destination station">
+    <br>
+    <button class="btn">
+      <span class="btn-text-one">Submit</span>
+      <span class="btn-text-two">Great!</span>
+  </button></form>
+</div>
+
+<h2> Train Details </h2>
+
+<table border="1px black">
+  <tr>
+    <th>train number</th>
+    <th>train name</th>
+    <th>train station code</th>
+    <th>train Station name</th>
+    <th>train Arrival Time</th>
+    <th>train Departure Time</th>
+    <th>train Distance</th>
+    <th>train Source station name</th>
+    <th>train Destination station name</th>
+    <th> train Fare (/person) </th>
+</tr>
+<% for(let i=0;i<data.length;i++){ %>
+<tr>
+   
+    <th><%= data[i].train_number %></th>
+    <th><%= data[i].train_name %></th>
+    <th><%= data[i].station_code %></th>
+    <th><%= data[i].station_name %></th>
+    <th><%= data[i].arrival_time %></th>
+    <th><%= data[i].departure_time %></th>
+    <th><%= data[i].distance %></th>
+    <th><%= data[i].source_station_name %></th>
+    <th><%= data[i].destination_station_name %></th>
+    <th><%= data[i].fare %></th>
+
+</tr>
+<% } %>
+</table>
+  <div id="train-details"></div>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+ <script src="/js/train.js"></script> 
+</body>
+</html>
+
+
+
+
+
+
+

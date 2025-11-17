@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="/css/hotel.css">
+</head>
+<body>
+    <nav class="fornav">
+        <img src="/image/shubham_logo.jpeg" alt="" class="logo">
+        <p class="head" >HOTELS IN MUMBAI</p>
+        <form class="search"><input type="text" placeholder="Search"><button>Search</button></form>  
+    </nav>
+     
+    <div class="position">
+    <% for( let i = 0; i < hotel.length; i++ ) { %>
+      <li class="list"> <a href="/mainlogin/hotels/<%= hotel[i].h_id %>"><img src="<%= hotel[i].image %>" alt="" class="formimg"><p><%= hotel[i].title %> <br> &#8377; <%= hotel[i].Price.toLocaleString("en-IN") %>/night</p></a> </li>
+    <% } %> 
+</div>
+    <form action="/mainlogin/hotels/add" method="get">
+        <button class="sym"><i class="ri-add-circle-line"></i></button>
+    </form>
+
+    
+</body>
+</html>

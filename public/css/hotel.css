@@ -1,0 +1,136 @@
+body{
+    height: 100vh;
+    width: 100%;
+}
+
+.home{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    color: orange;
+   }
+
+   .ri-home-8-fill{
+    position: fixed;
+    left: 1600px;
+    bottom: 700px;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    font-size: 60px;
+    color: orange;
+    border: 2px solid orange;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+   }
+
+.head{
+     font-size: 40px;
+     display: flex;
+     height: 100px;
+     align-items: center;
+     justify-content: center;
+     text-decoration: underline 2px orange;
+     position: relative;
+     left: 70px;
+}
+
+.list{
+    height: 370px;
+    width: 300px;
+    display: flex;
+    /* border:  1px solid black; */
+    margin: 10px;
+    margin-bottom: 15px;
+    
+}
+
+.position{
+    display: flex;
+    width: 100%;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: space-between;
+ /* grid-template-columns: 1fr 1fr 1fr; */
+ /* column-gap: 20px; */
+}
+
+.formimg{
+    height: 300px;
+    width: 300px;
+   display: flex;
+   border-radius: 10px;
+   object-fit: cover;
+}
+
+/* .formimg{
+    opacity: 0;
+} */
+
+.formimg:hover{
+    opacity: 0.5;
+    background-color: white;
+}
+
+.list a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.list p{
+    column-gap: 3px;
+}
+
+.sym{
+    background-color: white;
+border: none;
+position: absolute;
+bottom: 90px;
+right: 100px;
+}
+
+.ri-add-circle-line{
+    font-size: 50px;
+    position: fixed;
+    color: orange;
+}
+
+.fornav{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(237, 237, 233);
+    margin-bottom: 40px;
+
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+.search input{
+    width: 300px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+    left: 70px;
+}
+
+
+.search button{
+    width: 90px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    background-color: orange;
+    right: 21px;
+    position: relative;
+    border: none;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Details of <%= hotel[0].title %> </h1>
+    <ul>
+        <li>Title : <%= hotel[0].title %></li>
+        <li>Description: <%= hotel[0].description %></li>
+        <li>Price : &#8377; <%= hotel[0].Price.toLocaleString("en-IN") %></li>
+        <li>Location : <%= hotel[0].Location %></li>
+        <li>Country : <%= hotel[0].Country %></li>
+    </ul>
+    <form action="/mainlogin/hotels/<%= hotel[0].h_id %>/edit">
+        <button>Edit your Hotel Details</button>
+    </form>
+    <form action="/mainlogin/hotels/<%= hotel[0].h_id %>/delete">
+        <button>Delete your Hotel Details</button>
+    </form>
+</body>
+</html>

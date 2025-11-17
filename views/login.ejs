@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/image/shubham_logo.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgetsite</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <form action="/main/login" id="forform1" method="post">
+        <div id="forform">
+    
+        <h1>Login</h1>
+        <p>Login to your account to get back your data.</p>
+
+        <div id="googbtn">
+            <button type="submit"><img src="google.png" alt="" id="gimg">Sign in with Google</button>
+        </div>
+        <div>
+            <label for="foremail">Email*</label><br><input type="email" name="email" id="foremail" placeholder="abc@gmail.com" autocomplete="email"><br>
+           
+            <label for="forpass">Password*</label><br><input type="password" name="pass" id="forpass" placeholder="Min.8 characters">
+        
+        </div>
+        <div>
+            <button type="submit" id="mainbtn">Login</a></button>
+        </div>
+        <p>Don't have account? <button type="button" id="signin">Sign in</button></p>
+        
+    </div>
+    <!-- <div id="forimage"> -->
+        <!-- <img src="shubham_logo.jpeg" alt="" id="mon"> -->
+    <!-- </div> -->
+   
+</form>
+
+<form action="/main/login" id="forform2" method="post">
+    <div id="forsignin">
+
+    <h1>Sign in</h1>
+    <p>Sign in to your new account.</p>
+
+    <div>
+        <label for="foruser">Username*</label><br><input type="text" name="user" id="foruser" placeholder="abc_123" ><br>
+        <label for="foremail2">Email*</label><br><input type="email" name="email2" id="foremail2" placeholder="abc@gmail.com" ><br>
+        <p id="ifwrongemail">*wrong gmail.Please write valid gmail id.</p>
+        <label for="forpass2">Password*</label><br><input type="password" name="pass2" id="forpass2" placeholder="Min.8 characters">
+        <label for="forpasscon">Confirm Password*</label><br><input type="password" name="passcon" id="forpasscon" placeholder="Confirm password">
+        <p id="ifwrongpass">*Password and Confirm Password does not match.</p>
+    </div>
+    <div>
+        <button type="button" id="mainbtn2" >Sign In </a></button>
+    </div>s
+    <p>Already Have a Account ?<button type="button" id="signinlogin">Login</button></p>
+    
+</div>
+<!-- <div id="forimage"> -->
+    <!-- <img src="shubham_logo.jpeg" alt="" id="mon2"> -->
+<!-- </div> -->
+
+</form>
+
+<script src="/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>EDIT HOTEL</h1>
+    <form action="/mainlogin/hotels/<%= hotel[0].h_id %>/edit" method="post">
+
+        <input type="text" name="title" value="<%= hotel[0].title %>"> <br><br>
+        <textarea type="textarea" name="description" ><%= hotel[0].description %></textarea> <br><br>
+        <input type="text" name="image" value="<%= hotel[0].image %>"><br><br>
+        <input type="number" name="price" value="<%= hotel[0].Price %>"><br><br>
+        <input type="text" name="location" value="<%= hotel[0].Location %>"><br><br>
+        <input type="text" name="country" value="<%= hotel[0].Country %>"><br><br>
+        <button>Edit Hotels deatails</button><br>
+    </form>
+</body>
+</html>

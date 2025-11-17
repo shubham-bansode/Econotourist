@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/image/shubham_logo.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/register.css" type="text/css">
+</head>
+<body>
+  <div id="forboth">
+    <div id="main-page1">
+        <div id="forphoto">
+            <div id="nav">
+               <div id="nav-part1"><h4><i class="ri-menu-line"></i></h4></div>
+               <div id="nav-part2"><img src="/image/shubham_logo.jpeg" alt="" width="30px" height="30px"><h4 id="text2"><div id="nav2-text"><span>E</span>CONO-<span>T</span>OURIST</div></h4></div>
+               <div id="nav-part3">
+                <h4 class="nav3"><a href=""><i class="ri-user-add-fill"></i></a></h4>
+                <h4 class="nav3"><a href="#aboutus">About us</a></h4>
+                <h4 class="nav3"><a href="#whychoseus">Choose us</a></h4>
+            </div>
+        </div>
+
+      
+        <section id="home">
+          <div class="sidebar" >
+            <h3 class="sidebaroptions_header">Menu</h3>
+            <hr>
+            <a href="/mainlogin/<%= data[0].id %>/register" class="sidebaroptions">Registration</a>
+            <a href="/mainlogin/<%= data[0].id %>/planatrip" class="sidebaroptions">Plan a Trip</a>
+            <a href="/mainlogin/<%= data[0].id %>/hotels" class="sidebaroptions">Hotels</a>
+            <a href="/mainlogin/<%= data[0].id %>/map" class="sidebaroptions">Estismate Cost</a>
+            <a href="/mainlogin/<%= data[0].id %>/attraction" class="sidebaroptions">Attraction</a>
+            <a href="/mainlogin/<%= data[0].id %>/history" class="sidebaroptions">Trip History</a>
+            </div>
+              
+                <p id="head">Explore more, spend less</p>  
+                <p id="underhead">Plan awesome tours,at very reasonable budget</p>
+                <div id="forsearch">
+                        <div id="destination">Destination <input type="search" name="" id="destination-input" placeholder="Where are you going?"></div>
+                        <div id="departure">Departure Date <input type="date" name="" id="departure-input" placeholder=""></div>
+                        <div id="return">Return Date<input type="date" name="" id="return-input" placeholder=""></div>
+                        <div id="nop">No. of people <input type="number" name="" id="nop-input" placeholder="Total no. of peoples?"></div>
+                        <button type="button"><i class="ri-search-line"></i>Search</button>
+                </div>
+            </div> 
+        </div> 
+        </div>
+    </section>
+    
+    <section id="scrollarrow">
+    <div class="arrow">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    </section>
+
+      <section id = "aboutus">
+        <div class="main">
+        <div class="register">
+            <h2>Registration Form</h2>
+            <h3>Please fill your full details so we can kow you.</h3>
+            <form id="register" novalidate action="/mainlogin/<%= data[0].id %>/edit" method="post">
+
+                <label>First Name : </label>
+                <br>
+                <input type="text" name="fname"
+                id="name" placeholder="Enter Your First Name" class="name"  value="<%= data[0].firstname %>"  required>
+                <br><br>
+                <label>Last Name</label>
+                <br>
+                <input type="text" name="lname"
+                placeholder="Enter Your Last Name" class="name" value="<%= data[0].lastname %>"  required>
+                <br><br>           
+                <label>Your Age : </label>
+                <br>
+                <input type="number" name="age"  value="<%= data[0].age %>" class="name" required>
+                <br><br>
+                <label>Email : </label>
+                <br>
+                <input type="email" name="email"  value="<%= data[0].email %>" class="name" required readonly>
+                <br><br>
+                <label>Password</label>
+                <br>
+                <input type="password" name="password" value="<%= data[0].password %>" class="name" required readonly>
+                <br><br>
+                <label>Date Of Birth : </label>
+                <br>
+                <input type="date" name="dob" id="return-input" value="<%= data[0].DateofBirth %>" class="name" required>
+                <br><br>
+                <label>Gender : </label>
+                <br>
+                &nbsp;&nbsp;&nbsp; 
+                <input type="radio" name="gender" id="male" >
+                &nbsp;
+                <span id="male">Male</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender"  id="female">
+                &nbsp;
+                <span id="female">Female</span>
+                <br><br>
+                <label>Phone No. : </label>
+                <br>
+                <input type="tel" name="phoneno"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="<%= data[0].phoneno %>" class="name" required>
+                <br><br>
+                <button class="btn">
+                  <span class="btn-text-one">UPDATE</span>
+                  <span class="btn-text-two">COMPLETE UPDATE</span>
+              </button>
+              
+                <!-- <button type="Edit">Edit</button> -->
+            </form>
+        
+        </div>
+    </div>
+
+    <!-- <script>
+            // let btn = document.querySelector("#submit");
+            let forms = document.querySelectorAll("#register")
+            
+            // btn.addEventListener("click",()=>{
+            //     if()
+            // })
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+//   var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add(':valid')
+      }, false)
+    })
+})() -->
+    </section>
+
+
+<script>
+
+  let popup = document.getElementById("popup");
+
+  function openPopup(){
+    popup.classList.add("open-popup");
+  }
+  function closePopup(){
+    popup.classList.remove("open-popup");
+  }
+
+</script>
+</body>
+</html>

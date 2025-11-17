@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/planatrip.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <h2 id="head">Plan A Trip</h2>   <a href="/mainlogin/<%= table1[0].id %>" class="home"><i class="ri-home-8-fill"></i></a>
+
+    <div class="contain">
+       
+     <% for(let i=0;i<table2.length;i++){ %>
+        <a href="/mainlogin/<%= table1[0].id %>/<%= table2[i].tripid%>">
+        <div class="cards">
+            <span class="tripid"><b><%= table2[i].tripid %></b></span>
+          <span class="head"><b><%= table2[i].tripname %></b></span>
+          <span class="dest"><b><i class="ri-map-pin-line"></i> <%= table2[i].destination %></b></span>
+          <span class="budget"><b>&#8377; <%= table2[i].overallbudget.toLocaleString("en-IN") %></b></span>
+          <span class="start"><b><i class="ri-calendar-check-line"></i> <%= table2[i].startdate.toLocaleString("en-IN") %></b></span>
+          <span class="end"><b><i class="ri-calendar-close-line"></i> <%= table2[i].enddate.toLocaleString("en-IN") %></b></span>
+        </div>
+    </a>
+        <% } %>
+    </div>
+    <form action="/mainlogin/<%= table1[0].id %>/planatrip/add" method="get"        >
+        <button class="btn">
+            <span class="btn-text-one">ADD</span>
+            
+        </button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+.store{
+    height: 60px;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: inset -40px 40px 46px 0px rgba(0,0,0,0.1);
+    background-color: orange;
+    border-radius: 20px;
+}
+
+h1{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: 5px underline orange;
+}
+
+a{
+    height: 60px;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.head{
+    height: 60px;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.spam{
+    width: 8%;
+}
+
+.home{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    color: orange;
+   }
+
+   .ri-home-8-fill{
+    position: fixed;
+    left: 1600px;
+    bottom: 700px;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    font-size: 60px;
+    color: orange;
+    border: 2px solid orange;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+   }

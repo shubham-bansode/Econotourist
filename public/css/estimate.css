@@ -1,0 +1,212 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.home{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    color: orange;
+   }
+
+   .ri-home-8-fill{
+    position: fixed;
+    left: 1600px;
+    bottom: 700px;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    font-size: 60px;
+    color: orange;
+    border: 2px solid orange;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+   }
+   
+/* .formain{
+    border: 2px solid orange;
+    width: 200px;
+    height: 200px;
+} */
+
+.forradio{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+h2{
+    font-size: 40px;
+    text-decoration: 5px underline orange;
+     display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.maindiv{
+    height: 450px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: inline-flex;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25); */
+}
+
+/* label{
+    display: flex;
+    border: 2px solid orange;
+    height: 100px;
+    width: 100px;
+} */
+
+/* input{
+display: none;
+} */
+
+/* label{
+    display: flex;
+    height: 100px;
+    width: 200px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+} */
+
+/* .selecthead{
+    display: flex;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+} */
+/* .instationmain{
+    display: flex;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="radio"]  .instationmain:checked{
+    background-color: orange;
+} */
+
+
+
+/* ========================youtube========================= */
+.afterhead{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.selecthead{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.forradio{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.optionsDiv{
+
+    display: none;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.radio{
+    display: flex;
+    overflow: hidden;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+}
+
+.radio_input{
+    display: none;
+}
+
+.radio_label{
+    width: 100px;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 8px 14px;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    transition: background 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio_input:checked + .radio_label{
+       background-color: orange;
+}
+
+
+.btn {
+    width: 140px;
+    height: 50px;
+    background: linear-gradient(to top,  #ff8c08,#ffbd08, #fbff06);
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+   left: 125px;
+   top: 25px;
+   margin-top: 8px;
+   margin-bottom: 8px
+  }
+  
+  .btn span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: top 0.5s;
+  }
+  
+  .btn-text-one {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .btn-text-two {
+    position: absolute;
+    width: 100%;
+    top: 150%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .btn:hover .btn-text-one {
+    top: -100%;
+  }
+  
+  .btn:hover .btn-text-two {
+    top: 50%;
+  }
+
+
+  form{
+    border-radius: 20px;
+    height: 375px;
+    width: 415px;
+    box-shadow:  0 15px 30px rgba(0, 0, 0, 0.5);
+  }

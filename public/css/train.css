@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #map {
+    margin-top: 40px;
+    margin-left: auto;
+    height: 800px;
+    width: 50%;
+  }
+  .Enquiry{
+    position: relative;
+    top: -430px;
+    display: flex;
+    left:18%;
+  }
+
+  form {
+    height: 300px;
+    width: 200px;
+    /* border: 5px solid orange; */
+    margin-top: 20px;
+    padding: 20px 20px;
+    border-radius: 20px;
+    box-shadow: 0px -3px 71px -3px orange;
+  }
+
+  
+.train_head{
+  display: flex;
+  height: 20px;
+  width: 200px;
+  font-size: 30px;
+}
+
+label{
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.btn {
+  width: 140px;
+  height: 50px;
+  background: linear-gradient(to top,  #ff8c08,#ffbd08, #fbff06);
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+ left: 35px;
+ top: 25px;
+ margin-top: 8px;
+ margin-bottom: 8px
+}
+
+.btn span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: top 0.5s;
+}
+
+.btn-text-one {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn-text-two {
+  position: absolute;
+  width: 100%;
+  top: 150%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn:hover .btn-text-one {
+  top: -100%;
+}
+
+.btn:hover .btn-text-two {
+  top: 50%;
+}
+
+  input{
+    padding: 5px 5px;
+    border-radius: 20px;
+    height: 25px;
+    background-color: white;
+  }
+  
+  form label {
+    display: block;
+  }
+  
+  form input[type="text"] {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  form button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  #train-details {
+    margin-top: 20px;
+  }
+
+  #search-form {
+    margin-top: auto;
+  }
+  
+  
+  .home{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    color: orange;
+   }
+
+   .ri-home-8-fill{
+    position: fixed;
+    left: 1600px;
+    bottom: 700px;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    font-size: 60px;
+    color: orange;
+    border: 2px solid orange;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+   }

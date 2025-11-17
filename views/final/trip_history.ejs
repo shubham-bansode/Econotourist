@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/trip_history.css">
+      <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>Trip History</title>
+</head>
+<body>
+
+ 
+    <h1 class="mainhead">Total Amount And Saving</h1>
+    <a href="/mainlogin/<%= data1[0].user_id %>" class="home"><i class="ri-home-8-fill"></i></a>
+    
+    <h3 class="mainhead"> Hotel Details </h3>
+    <h2 class="hotel_name"><b><%= data1[0].hotel_name %></b></h2>
+    <img src="<%= data1[0].hotel_image %>" alt="" class="forimage">
+        
+    <p class="hotel_location"><%= data1[0].hotel_location %></p>
+        <p class="hotel_price">&#8377; <%= data1[0].hotel_price.toLocaleString("en-IN") %></p>
+        
+
+
+        <h3 class="mainhead"> Attraction Details </h3>
+        <div class="attract">
+        <% if (data1.attraction_name == null) {%>
+            <h1>You havent Choosen any Attraction point</h1>
+        <% }else {%>    
+        <% for (let i = 0; i < data1.length; i++) { %>
+            <div class="attract_spot">
+            <img src="<%= data1[i].attraction_image %>" alt="" class="attimage">
+            <p class="attract_name"><%= data1[i].attraction_name %></p>
+            <p class="attract_price">&#8377; <%= data1[i].attraction_price.toLocaleString("en-IN") %></p>
+        </div>
+        <% } %>
+        <% } %>
+    </div>
+
+       
+    
+ 
+
+
+
+    <h3 class="mainhead"> Ride Details </h3>
+    <div class="ride">
+      <span class="spann">Source - Destination</span> 
+      <span class="spam">Distance (in km)</span>  
+      <span class="spam">Ola Estimated Price</span> 
+      <span class="spam"> Rickshaw Estimated Price</span>
+    </div>
+    <% for (let i = 0; i < data2.length; i++) { %>
+        <div class="ride">
+       <span class="spann"><%= data2[i].source %> - <%= data2[i].destination %></span> 
+       <span class="spam"><%= data2[i].distance %></span> 
+       <span class="spam">&#8377; <%= data2[i].ola_price.toLocaleString("en-IN") %></span>
+       <span class="spam">&#8377; <%= data2[i].rickshaw_price.toLocaleString("en-IN") %></span> 
+    </div>
+    <% } %>
+
+
+    
+        
+    <h3 class="mainhead"> Trip Details </h3>
+        <div class="main">
+        
+         <p><u><b><span class = "trip_head">Trip ID</b><span></b></u>: &ensp;<%= data3[0].tripid %></p>
+        <p><u><b><span class = "trip_head">Trip Name:</b><span></b></u> &ensp;<%= data3[0].tripname %></p>
+        <p><u><b><span class = "trip_head">Trip Start Date</b><span></b></u>: &ensp;<%= data3[0].startdate %></p>
+        <p><u><b><span class = "trip_head">Trip End Date</b><span></b></u>: &ensp;<%= data3[0].enddate %></p>
+        <p><u><b><span class = "trip_head">Trip Source Location</b><span></b></u>: &ensp;<%= data3[0].source %></p>
+        <p><u><b><span class = "trip_head">Trip Destination Location</b><span></b></u>: &ensp;<%= data3[0].destination %></p>
+
+    </div>
+
+       
+
+    <h3 class="mainhead"> Expense Details</h3>
+          <div class="exp">
+    
+        <p><u><b><span class = "trip_head">Number of travelers </b><span></b></u>:  &ensp;<%= data3[0].No_person %> Person</p>
+        <p><u><b><span class = "trip_head">Overall Budget of Trip </b><span></b></u>:  &ensp; &#8377; <%= data3[0].overallbudget.toLocaleString("en-IN") %></p>
+        <p><u><b><span class = "trip_head">Final Amount (Ola) </b><span></b></u>:<b><span class = "trip_price"> &ensp; &#8377; <%= final_amount_with_ola.toFixed(2) %></span></p>
+        <p><u><b><span class = "trip_head">Final Amount (Rickshaw) </b><span></b></u>: <b><span class = "trip_price"> &ensp; &#8377; <%= final_amount_with_rickshaw.toFixed(2) %></span></p>
+            <p><u><b><span class = "trip_head">Saving For Ola  </b><span></b></u>:<b><span class = "trip_save"> &ensp; &#8377; <%= (data3[0].overallbudget-final_amount_with_ola).toFixed(2) %></span></p>
+                <p><u><b><span class="trip_head">Saving For Rickshaw</span></b></u>: <b><span class="trip_save">&ensp;&#8377; <%= (data3[0].overallbudget - final_amount_with_rickshaw).toFixed(2)%> </span></b></p>
+            </p>
+        </div>
+
+            <form action="/mainlogin/<%= data3[0].id %>/sendmail" method="post">
+                <button class="btn">
+                  <span class="btn-text-one">Email Me!!</span>
+                  <span class="btn-text-two">Sending Email...</span>
+                </button>
+            </form>
+
+
+    <!-- <div class="button">
+        <button class="btn">
+            <span class="btn-text-one">UPDATE</span>
+            <span class="btn-text-two">COMPLETE UPDATE</span>
+        </button>
+    </div> -->
+
+</body>
+</html>

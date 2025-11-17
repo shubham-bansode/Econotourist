@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/planshow.css">
+</head>
+<body>
+     
+  <form action="/mainlogin/<%= data1[0].id %>/<%= data2[0].tripid %>/pat" method="post" id="tripForm">
+    <h1><img src="/image/shubham_logo.jpeg" alt="" class="logoimg">PLEASE CHOOSE YOU HOTEL FOR STAYING</h1>
+    
+    <div class="hotelcontain">
+        
+        <% for( let i = 0; i < data3.length; i++ ) { %>
+            <label for="<%= i %>">
+    
+                <input type="radio" class="position shadow check" name="checks" value="<%= data3[i].title %>">
+                <img src="<%= data3[i].image %>" alt="" class="patimg">
+                <p><b><%= data3[i].title %> </b><br> &#8377; <%= data3[i].Price.toLocaleString("en-IN") %>/night</p>
+            </label>       
+        <% } %> 
+
+        <h1><img src="/image/shubham_logo.jpeg" alt="" class="logoimg">PLEASE CHOOSE YOU ATTRACTION SPOTS</h1>
+        <% for( let i = 0; i < data4.length; i++ ) { %>
+            <label for="<%= i %>">
+    
+                <input type="radio" class="position shadow check" name="tour<%= data4[i].ID%>"  value="<%= data4[i].Name %>">
+                <img src="<%= data4[i].Image_URL %>" alt="" class="patimg">
+                <p><b><%= data4[i].Name %> </b><br> &#8377; <%= data4[i].Entrance_Fee_INR.toLocaleString("en-IN") %>/night</p>
+            </label>       
+        <% } %> 
+    </div>
+    <button class="btn">
+        <span class="btn-text-one">Submit</span>
+        <span class="btn-text-two">Confirm!</span>
+    </button>
+  </form>
+
+   <script>
+    // document.getElementById('tripForm').addEventListener('submit', function(event) {
+    //     event.preventDefault(); // Prevents the form from submitting
+
+    //     const radioButtons = document.querySelectorAll('input[type="radio"][name="checks"]:checked');
+    //     let selectedHotel = null;
+
+    //     console.log(radioButtons);
+
+    // });
+  </script> 
+</body>
+</html>

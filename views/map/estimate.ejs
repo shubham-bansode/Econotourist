@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estimate Travel Cost</title>
+<link rel="stylesheet" href="/css/estimate.css">
+</head>
+<body>
+
+    <div class="maindiv">
+<form id="travelForm" action="/mainlogin/<%= data[0].id %>/<%= data[0].tripid %>/finalinstation" method="get">
+
+    <h2 class="mainheading">Estimate Travel Cost</h2>
+    <label for="stationType" class="selecthead">Select Station Type:</label>
+    <div class="radio">
+    <input type="radio" id="inStation" name="stationType" value="inStation" class="radio_input" checked>
+    <label for="inStation" class="radio_label">In-Station</label>
+    <input type="radio" id="outStation" name="stationType" class="radio_input" value="outStation">
+    <label for="outStation" class="radio_label">Out-Station</label>
+</div>
+
+   
+        <div class="optionsDiv">
+            
+        <label for="transportMode" class="afterhead">Select Transport Mode:</label>
+        <div class="forradio">
+        <input type="radio" id="ola" name="transportMode" value="ola" class="radio_input">
+        <label for="ola" class="radio_label">Ola</label><br>
+        <input type="radio" id="trains" name="transportMode" value="trains" class="radio_input">
+        <label for="trains" class="radio_label">Trains</label>
+    </div>
+    </div>
+
+    <button class="btn">
+        <span class="btn-text-one">Submit</span>
+        <span class="btn-text-two">Great!</span>
+    </button>
+</form>
+</div>
+
+<script>
+    function redirectToPage() {
+        var stationType = document.querySelector('input[name="stationType"]:checked');
+        console.log(stationType.value);
+        if (stationType === "inStation") {
+            window.location.href = "map/instation.ejs";
+        } else {
+            var transportMode = document.querySelector('input[name="transportMode"]:checked').value;
+            if (transportMode === "ola") {
+                window.location.href = "map/instation.ejs";
+            } else if (transportMode === "trains") {
+                window.location.href = "map/train.ejs";
+            }
+        }
+    }
+    document.getElementById("outStation").addEventListener("click", function() {
+        document.querySelector(".optionsDiv").style.display = "flex";
+    });
+
+    document.getElementById("inStation").addEventListener("click", function() {
+        document.querySelector(".optionsDiv").style.display = "none";
+    });
+</script>
+
+</body>
+</html>
+

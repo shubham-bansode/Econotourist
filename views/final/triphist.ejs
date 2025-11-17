@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/triphist.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <h1>TRIP HISTORY</h1>  <a href="" class="home"><i class="ri-home-8-fill"></i></a>
+    <div class="main">
+                <div class="store">
+              <div class="head">  <span class="spam">TRIP ID</span><span class="spam">TRIP TITLE</span> <span class="spam">DESTINATION</span> <span class="spam">OVERALL BUDGET</span>  <span class="spam">START DATE</span>  </div>
+                    </div> 
+    </div>
+
+    <div class="main">
+        <% for( let i = 0; i < data.length; i++ ) { %>
+                <div class="store">
+                    <a href="/mainlogin/<%= data[i].id %>/history/<%= data[i].tripid %>"><span class="spam"><%= data[i].tripid %></span><%= data[i].tripname %></span> <span class="spam"><%= data[i].destination%> </span> <span class="spam"><%= data[i].overallbudget %></span>  <span class="spam"><%=new Date(data[i].startdate).getDate() %>/<%=new Date(data[i].startdate).getMonth() %>/<%=new Date(data[i].startdate).getFullYear() %></span>  
+                    </div></a> <span class="spam"> 
+        <% } %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="/css/attraction.css">
+</head>
+<body>
+    <nav class="fornav">
+        <img src="/image/shubham_logo.jpeg" alt="" class="logo">
+        <p class="head" >Attractions Spots</p>
+        <form class="search"><input type="text" placeholder="Search"><button>Search</button></form>  
+    </nav>
+     
+    <div class="position">
+    <% for( let i = 0; i < data.length; i++ ) { %>
+      <li class="list"> <a href="/mainlogin/hotels/<%= data[i].id %>"><img src="<%= data[i].Image_URL %>" alt="<%= data[i].name%>" class="formimg"><p><%= data[i].Name %><br> &#8377; <%=data[i].Entrance_Fee_INR.toLocaleString("en-IN") %></p></a> </li>
+    <% } %> 
+</div>
+    
+</body>
+</html>
